@@ -13,12 +13,12 @@ int main()
 {
     ifstream fin;
     fin.open("Test_Data.txt");
-    string test = "Fail";
+    string feed = "Fail";
 
     if(fin.good())
     {
-        getline(fin,test);
-        cout << test;
+        getline(fin,feed);
+        cout << feed;
         fin.close( );         
     }
     else
