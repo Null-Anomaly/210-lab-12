@@ -6,14 +6,24 @@ IDE used: VSC*/
 #include <numeric>    // for accumulate()
 #include <array>
 #include <fstream>
+#include <string>
 using namespace std;
 
 int main()
 {
     ifstream fin;
-    fin.open("Test_Data");
+    fin.open("Test_Data.txt");
+    string test = "Fail";
+
     if(fin.good())
     {
-        
+        getline(fin,test);
+        cout << test;
+        fin.close( );         
     }
+    else
+    {
+        cout << "File not found.\n";
+    }
+    
 }
