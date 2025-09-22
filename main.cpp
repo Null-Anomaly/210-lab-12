@@ -22,6 +22,7 @@ int main()
     string feed = "Fail";
     array<string, SIZE> fullList;
 
+    //Opens up the file and feeds all of the elements into the array
     if(fin.good())
     {
         for(int i = 0; i < SIZE; i++)
@@ -38,12 +39,15 @@ int main()
         cout << "File not found.\n";
     }
 
+    //Searches for the word pen.
     string hunt = "pen";
     array<string, SIZE>::iterator finder;
     finder = find(fullList.begin(), fullList.end(), hunt);
     cout << "The word " << hunt << " was found\n";
 
-    cout << "The array is " << fullList.size() << " elements long";
+    //Gives various bits of information about the array such as size, element location, and
+    //first and last elements.
+    cout << "The array is " << fullList.size() << " elements long\n";
     cout << "Element 5 is " << fullList[4] << "\n";
     cout << "The front and back elements are: " << fullList.front() << " and " << fullList.back() << "\n";
     
